@@ -6,7 +6,7 @@ import math
 import scipy.integrate
 
 def fact(n):
-	return none
+	return math.factorial(n)
 	"""Computes the factorial of a natural number.
 	
 	Pre: -
@@ -30,7 +30,9 @@ def roots(a, b, c):
 	"""
 
 def integrate(function, lower, upper):
-	return scipy.integrate.quad(function, lower, upper)
+	f = lambda x: eval(function)
+	a=  scipy.integrate.quad(f, lower, upper)
+	return a[0]
 	"""Approximates the integral of a fonction between two bounds
 	
 	Pre: 'function' is a valid Python expression with x as a variable,
@@ -43,7 +45,7 @@ def integrate(function, lower, upper):
 		you'll probably need the 'eval' function to evaluate the function
 		to integrate given as a string.
 	"""
-	pass
+
 
 if __name__ == '__main__':
 	print(fact(5))
