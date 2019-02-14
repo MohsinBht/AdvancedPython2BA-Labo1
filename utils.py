@@ -6,7 +6,7 @@ import math
 import scipy.integrate
 
 def fact(n):
-	return math.factorial(n)
+	return none
 	"""Computes the factorial of a natural number.
 	
 	Pre: -
