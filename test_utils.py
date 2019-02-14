@@ -8,6 +8,8 @@ import utils
 class TestUtils(unittest.TestCase):
     def test_fact(self):
         self.assertEqual(utils.fact(4), 24)
+        with self.assertRaises(ValueError):
+            utils.fact(-1)
 
     
     def test_roots(self):
